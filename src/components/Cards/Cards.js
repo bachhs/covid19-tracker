@@ -13,7 +13,7 @@ function Cards({ data, ...rest }) {
             <Grid container spacing={3} justify="center">
                 <Grid item component={Card} xs={12} md={3} className="card infected">
                     <CardContent>
-                        <Typography color="textSecondary" gutterBottom>Infected</Typography>
+                        <Typography color="textSecondary" gutterBottom>Tổng số ca nhiễm</Typography>
                         <Typography variant="h5">
                             {!data ? <Skeleton animation="wave" /> : <CountUp
                                 start={0}
@@ -22,13 +22,13 @@ function Cards({ data, ...rest }) {
                             />
                             }
                         </Typography>
-                        <Typography color="textPrimary">{!data ? <Skeleton animation="wave" /> : new Date(data.lastUpdate).toDateString()}</Typography>
-                        <Typography variant="body2">Number of active cases of COVID19</Typography>
+                        <Typography color="textPrimary">{!data ? <Skeleton animation="wave" /> : new Date(data.lastUpdate).toLocaleDateString('vi-VN')}</Typography>
+                        <Typography variant="body2">Tổng số ca nhiễm COVID19</Typography>
                     </CardContent>
                 </Grid>
                 <Grid item component={Card} xs={12} md={3} className="card recovered">
                     <CardContent>
-                        <Typography color="textSecondary" gutterBottom>Recovered</Typography>
+                        <Typography color="textSecondary" gutterBottom>Đã bình phục</Typography>
                         <Typography variant="h5">
                             {!data ? <Skeleton animation="wave" /> : <CountUp
                                 start={0}
@@ -37,13 +37,13 @@ function Cards({ data, ...rest }) {
                             />
                             }
                         </Typography>
-                        <Typography color="textPrimary">{!data ? <Skeleton animation="wave" /> : new Date(data.lastUpdate).toDateString()}</Typography>
-                        <Typography variant="body2">Number of recoveries from COVID19</Typography>
+                        <Typography color="textPrimary">{!data ? <Skeleton animation="wave" /> : new Date(data.lastUpdate).toLocaleDateString('vi-VN')}</Typography>
+                        <Typography variant="body2">Tổng số ca đã bình phục COVID19</Typography>
                     </CardContent>
                 </Grid>
                 <Grid item component={Card} xs={12} md={3} className="card deaths">
                     <CardContent>
-                        <Typography color="textSecondary" gutterBottom>Deaths</Typography>
+                        <Typography color="textSecondary" gutterBottom>Số ca tử vong</Typography>
                         <Typography variant="h5">
                             {!data ? <Skeleton animation="wave" /> : <CountUp
                                 start={0}
@@ -52,8 +52,8 @@ function Cards({ data, ...rest }) {
                             />
                             }
                         </Typography>
-                        <Typography color="textPrimary">{!data ? <Skeleton animation="wave" /> : new Date(data.lastUpdate).toDateString()}</Typography>
-                        <Typography variant="body2">Number of deaths caused by COVID19</Typography>
+                        <Typography color="textPrimary">{!data ? <Skeleton animation="wave" /> : new Date(data.lastUpdate).toLocaleDateString('vi-VN')}</Typography>
+                        <Typography variant="body2">Số ca tử vong bởi COVID19</Typography>
                     </CardContent>
                 </Grid>
             </Grid>

@@ -23,7 +23,7 @@ function Chart({ data, country, ...rest }) {
         data ? (
             <Bar
                 data={{
-                    labels: ['Infected', 'Recovered', 'Deaths'],
+                    labels: ['Ca nhiễm', 'Bình phục', 'Tử vong'],
                     datasets: [
                         {
                             label: 'People',
@@ -56,15 +56,15 @@ function Chart({ data, country, ...rest }) {
         dailyData.length ? (
             <Line
                 data={{
-                    labels: dailyData.map(({ date }) => new Date(date).toLocaleDateString()),
+                    labels: dailyData.map(({ date }) => new Date(date).toLocaleDateString('vi-VN')),
                     datasets: [{
                         data: dailyData.map((data) => data.confirmed),
-                        label: 'Infected',
+                        label: 'Ca nhiễm',
                         borderColor: '#1e88e5',
                         fill: true,
                     }, {
                         data: dailyData.map((data) => data.deaths),
-                        label: 'Deaths',
+                        label: 'Tử vong',
                         borderColor: '#d81b60',
                         backgroundColor: 'rgba(255, 0, 0, 0.5)',
                         fill: true,
