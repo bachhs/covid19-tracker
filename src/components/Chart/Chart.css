@@ -3,3 +3,9 @@
     justify-content: center;
     width: 65%;
 }
+
+@media (max-width: 959px) {
+    .chart-container {
+        width: 100%;
+    }
+}

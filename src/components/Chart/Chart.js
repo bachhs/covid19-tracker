@@ -38,7 +38,17 @@ function Chart({ data, country, ...rest }) {
                 }}
             />
         ) : <Skeleton variant="rect" width="100%">
-                <Bar />
+                <Bar
+                    data={{
+                        labels: ['Loading'],
+                        datasets: [
+                            {
+                                label: 'Loading',
+                                data: [0],
+                            },
+                        ],
+                    }}
+                />
             </Skeleton>
     );
 
@@ -63,7 +73,14 @@ function Chart({ data, country, ...rest }) {
                 }}
             />
         ) : <Skeleton variant="rect" width="100%">
-                <Line />
+                <Line data={{
+                    labels: 'Loading',
+                    datasets: [{
+                        data: 0
+                    }
+                    ],
+                }}
+                />
             </Skeleton>
     );
 

@@ -20,3 +20,9 @@
 .deaths {
     border-bottom: 10px solid #d81b60;
 }
+
+@media (max-width: 959px) {
+    .card {
+        margin: 2% 0 !important;
+    }
+}
