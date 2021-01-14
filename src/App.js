@@ -48,6 +48,7 @@ function App() {
     <div className="App-container">
       <span className="image">
         <Image
+          style={{ backgroundColor: 'transparent' }}
           src="/static/images/image.png"
           aspectRatio={(370 / 82)}
           alt="COVID19"
