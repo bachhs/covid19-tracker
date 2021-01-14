@@ -34,7 +34,7 @@ function Chart({ data, country, ...rest }) {
                 }}
                 options={{
                     legend: { display: false },
-                    title: { display: true, text: `Current state in ${country}` },
+                    title: { display: true, text: `Số liệu thống kê tại ${country}` },
                 }}
             />
         ) : <Skeleton variant="rect" width="100%">
